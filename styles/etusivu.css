@@ -1,22 +1,118 @@
+@font-face {
+    font-family: Mynerve;
+    src: url("../fonts/Mynerve-Regular.ttf");
+}
+
 body {
     margin: 0;
     background-color: #efe9e3;
+    font-family: Mynerve;
 }
 
 header {
-    margin: 0;
-    padding: 0.75%;
-    background-color: #ffffff;
     display: flex;
-    justify-content: center;
+    position: sticky;
+    align-items: center;
+    padding: 0 1rem;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 5px #dcd3cb;
 }
 
-/*h1 {
+.left, .center, .right {
+    flex: 1;
+}
 
-}*/
+.center {
+    text-align: center;
+    font-size: 130%;
+}
 
-.navbar {
-    align-self: center;
-    width: 3%;
-    height: 60px;
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 17%;
+    height: 64%;
+    padding: 1rem 1rem;
+    background-color: rgb(255, 255, 255);
+    border-left-style: solid;
+    border-bottom-style: solid;
+    visibility: hidden;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 2.5rem 1rem;
+    margin: 0;
+    line-height: 400%;
+}
+
+#navbar ul li:hover {
+    font-size: 150%;
+}
+
+#navbarOpen {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#navbarClose {
+    float: right;
+    border: none;
+    background-color: #ffffff;
+    font-size: 200%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#darken {
+    position: fixed;
+    padding: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.content {
+    margin-left: 17.5%;
+    margin-top: 3%;
+    padding: 13% 0;
+    width: 65%;
+    background-color: #dcd3cb;
+    box-shadow: 0px 7px 1px #bcb8b3;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.play {
+    background-color: #dcd3cb;
+    margin: 3%;
+    padding: 2rem 7rem;
+    border: none;
+    box-shadow: 0px 7px 1px #bcb8b3;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 3.5rem 2rem;
+    width: 100%;
+    background-color: #C9B59C;
+    box-shadow: 0px -7px 1px #D9CFC7;
+    font-size: 200%;
 }
