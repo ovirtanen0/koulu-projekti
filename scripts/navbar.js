@@ -4,9 +4,11 @@ navbarClose = document.getElementById("navbarClose");
 
 
 navbarOpen.addEventListener("click", () => {
-    navbar.classList.toggle("open");
+    navbar.style.right = "0";
+    navbar.style.boxShadow = "0 0 0 max(100vh, 100vw) rgba(0, 0, 0, .25)";
 });
 
 navbarClose.addEventListener("click", () => {
-    navbar.classList.toggle("close");
+    navbar.style.right = "-350px";
+    navbar.style.boxShadow = "none";
 });

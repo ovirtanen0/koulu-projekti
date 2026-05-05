@@ -42,19 +42,11 @@ header {
     top: 0;
     right: -350px;
     width: 17%;
-    height: 64%;
-    background-color: rgb(255, 255, 255);
-    border-left-style: solid;
-    border-bottom-style: solid;
-    transition: right 0.3s ease;
-}
-
-#navbar.open {
-    right: 0;
-}
-
-#navbar.close {
-    right: -350px;
+    height: 63%;
+    background-image: url("../images/navbarBg.png");
+    background-repeat: no-repeat;
+    box-shadow: none;
+    transition: right 0.3s ease, box-shadow 0.3s ease;
 }
 
 #navbar ul {
@@ -65,35 +57,46 @@ header {
 }
 
 #navbar ul li {
-    padding: 1rem 1rem;
-    font-size: 140%;
-    font-weight: 700;
-    transition: font-size 0.3s, text-shadow 0.3s;
+    padding: 2rem 1rem;
+    font-size: 160%;
+    font-weight: 600;
+    transition: font-size 0.2s, text-shadow 0.2s;
 }
 
 #navbar ul li:hover {
-    font-size: 170%;
+    font-size: 190%;
     text-shadow: 0 0 15px #C9B59C;
 }
 
-#navbarOpen {
+#navbar ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#navbarOpen { /* navbarin avaamis painike */
     width: 82px;
     height: 82px;
-    background: url(../images/Navibar.png);
+    background: url("../images/navbar.png");
     background-size: 82px 82px;
     border: none;
     cursor: pointer;
 }
 
-#navbarClose {
+.navbarClose { /* navbarin sulkemis painike */
     font-family: Mynerve;
     float: right;
     border: none;
-    background-color: #ffffff;
-    font-size: 200%;
+    background: transparent;
+    font-size: 300%;
     width: 50px;
     height: 50px;
     cursor: pointer;
+    transition: font-size 0.1s, transform 0.1s;
+}
+
+.navbarClose:hover {
+    font-size: 330%;
+    transform: rotate(3deg);
 }
 
 .content {
@@ -112,6 +115,7 @@ header {
 }
 
 .play {
+    font-family: Mynerve;
     background-color: #dcd3cb;
     margin: 3%;
     padding: 2rem 7rem;
