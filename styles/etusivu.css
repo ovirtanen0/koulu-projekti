@@ -42,11 +42,11 @@ header {
     top: 0;
     right: -350px;
     width: 17%;
-    height: 63%;
+    height: 638px;
     background-image: url("../images/navbarBg.png");
     background-repeat: no-repeat;
     box-shadow: none;
-    transition: right 0.3s ease, box-shadow 0.3s ease;
+    transition: right 0.3s ease, box-shadow 0.1s ease;
 }
 
 #navbar ul {
@@ -60,12 +60,13 @@ header {
     padding: 2rem 1rem;
     font-size: 160%;
     font-weight: 600;
-    transition: font-size 0.2s, text-shadow 0.2s;
+    transition: font-size 0.2s, text-shadow 0.2s, transform 0.1s;
 }
 
 #navbar ul li:hover {
     font-size: 190%;
     text-shadow: 0 0 15px #C9B59C;
+    transform: rotate(1deg);
 }
 
 #navbar ul li a {
@@ -80,6 +81,11 @@ header {
     background-size: 82px 82px;
     border: none;
     cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+#navbarOpen:hover {
+    box-shadow: 0px 4px 5px #bcb8b3;
 }
 
 .navbarClose { /* navbarin sulkemis painike */
@@ -122,6 +128,44 @@ header {
     border: none;
     box-shadow: 0px 7px 1px #bcb8b3;
     cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    
+    width: 35%;
+    height: 50%;
+    overflow: auto;
+    background-color: #efe9e3;
+    border: solid #C9B59C;
+}
+
+.modalClose {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 300%;
+    transition: font-size 0.1s, transform 0.1s;
+}
+
+.modalClose:hover {
+    cursor: pointer;
+    font-size: 330%;
+    transform: rotate(3deg);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 5%;
+    font-size: 200%;
+    /*outline-style: solid;
+    outline-color: red;*/
 }
 
 footer {

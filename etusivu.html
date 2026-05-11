@@ -29,7 +29,25 @@
 
     <div class="content"></div>
 
-    <div class="start"><button class="play">></button></div>
+    <div class="start"><button id="modalOpen" class="play">></button></div>
+
+    <div id="modallogin" class="modal">
+        <span id="modalClose" class="modalClose">&times;</span>
+
+        <form class="modal-content">
+        
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" name="uname" required>
+
+            <label for="pass"><b>Password</b></label>
+            <input type="password" name="pass" required>
+
+            <button type="submit">Login</button>
+        </div>
+
+        </form>
+    </div>
 
     <footer>Footer</footer>
 
