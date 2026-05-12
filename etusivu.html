@@ -32,19 +32,22 @@
     <div class="start"><button id="modalOpen" class="play">></button></div>
 
     <div id="modallogin" class="modal">
-        <span id="modalClose" class="modalClose">&times;</span>
+        <span id="modalClose" class="modalClose">X</span>
 
         <form class="modal-content">
         
         <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" name="uname" required>
+            <b>Sign in</b>
+            <label for="Email"></label>
+            <input type="email" name="Email" placeholder="Email" required>
 
-            <label for="pass"><b>Password</b></label>
-            <input type="password" name="pass" required>
+            <label for="pass"></label>
+            <input type="password" name="pass" placeholder="Password" required>
 
             <button type="submit">Login</button>
         </div>
+
+        <div class="signup"></div>
 
         </form>
     </div>
@@ -52,5 +55,6 @@
     <footer>Footer</footer>
 
     <script src="scripts/navbar.js"></script>
+    <script src="scripts/loginModal.js"></script>
 </body>
 </html>
